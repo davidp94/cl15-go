@@ -13,7 +13,7 @@ func generateLargePrime(k int) (p *big.Int, err error) {
 func main() {
 	log.Println("CL15 Golang implementation")
 	log.Println("Credits to Prof Buchanan")
-	bits := 128
+	bits := 2048
 
 	p, err := generateLargePrime(bits)
 	if err != nil {
@@ -36,9 +36,9 @@ func main() {
 
 	d := new(big.Int).ModInverse(e, phi)
 
-	uid := new(big.Int).SetInt64(43)
-	xa := new(big.Int).SetInt64(11)
-	xb := new(big.Int).SetInt64(10)
+	uid := new(big.Int).SetInt64(19382983298)
+	xa := new(big.Int).SetInt64(3929333233)
+	xb := new(big.Int).SetInt64(2389239238)
 
 	id1 := new(big.Int).Exp(uid, xa, n)
 	id2 := new(big.Int).Exp(uid, xb, n)
